@@ -5,33 +5,49 @@
     font-family: Arial, sans-serif;
 }
 
-body {
-    line-height: 1.6;
-}
 
-.navbar {
-    background-color: #1e3c72;
-    padding: 15px 30px;
+
+
+
+/* image */
+
+.hero {
+    background-image: url('one.png'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: white;
+    text-align: center;
 }
 
-.navbar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+.hero-content {
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: adds a dark overlay for better text readability */
+    border-radius: 10px;
 }
 
-.navbar .menu a {
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
     color: white;
+    background-color: #007BFF;
     text-decoration: none;
-    margin-left: 20px;
-    transition: color 0.3s ease;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.navbar .menu a:hover {
-    color: #ff6600;
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+body {
+    line-height: 1.6;
 }
 
 .hero {
@@ -75,14 +91,4 @@ body {
 
 .cta-button:hover {
     background-color: #cc5500;
-}
-
-.footer {
-    background-color: #1e3c72;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
