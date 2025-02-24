@@ -1,11 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <title>Our Services - IT Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+        }
+
+        /* Services Section */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Call-to-Action */
+        .cta {
+            text-align: center;
+            padding: 40px 20px;
+            background: #28a745;
+            color: white;
+        }
+
+        .cta .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: white;
+            color: #28a745;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #343a40;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <!-- Header -->
+    <header>
+        <h1>IT Solutions Company</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Our IT Services</h2>
+        <p>Empowering businesses with cutting-edge technology solutions.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="service-card">
+            <h3>Web Development</h3>
+            <p>Custom websites & web applications to elevate your online presence.</p>
+        </div>
+        <div class="service-card">
+            <h3>Cloud Solutions</h3>
+            <p>Secure cloud computing solutions for scalable business operations.</p>
+        </div>
+        <div class="service-card">
+            <h3>Cybersecurity</h3>
+            <p>Advanced security solutions to protect your digital assets.</p>
+        </div>
+        <div class="service-card">
+            <h3>Software Development</h3>
+            <p>Tailored software solutions to streamline your business processes.</p>
+        </div>
+        <div class="service-card">
+            <h3>IT Consulting</h3>
+            <p>Expert guidance to optimize your IT infrastructure and strategy.</p>
+        </div>
+        <div class="service-card">
+            <h3>AI & Automation</h3>
+            <p>Leverage AI and automation to improve efficiency and innovation.</p>
+        </div>
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="cta">
+        <h2>Ready to Transform Your Business?</h2>
+        <p>Contact us today to discuss your IT needs and take your business to the next level.</p>
+        <a href="#" class="btn">Get in Touch</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 IT Solutions Company. All rights reserved.</p>
+    </footer>
+
 </body>
+
 </html>

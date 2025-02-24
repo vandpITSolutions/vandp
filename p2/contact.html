@@ -1,11 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact Us - IT Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            text-align: left;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            margin-top: 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            max-width: 400px;
+            text-align: left;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .map iframe {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        /* Call-to-Action */
+        .cta {
+            text-align: center;
+            padding: 40px 20px;
+            background: #28a745;
+            color: white;
+        }
+
+        .cta .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: white;
+            color: #28a745;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #343a40;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <!-- Header -->
+    <header>
+        <h1>IT Solutions Company</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Get in Touch</h2>
+        <p>We would love to hear from you! Reach out to us using the form below or visit our office.</p>
+
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <!-- Contact Details -->
+            <div class="contact-info">
+                <h3>Our Office</h3>
+                <p><strong>Address:</strong> 123 IT Street, Tech City, TX 75001</p>
+                <p><strong>Phone:</strong> +1 234 567 890</p>
+                <p><strong>Email:</strong> contact@itsolutions.com</p>
+
+                <!-- Google Map -->
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345084313!2d144.9556511153166!3d-37.81732797975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df9c3b9f7%3A0x1dfdab1df4a1c6eb!2sTech%20Park!5e0!3m2!1sen!2sus!4v1628167262512"
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="cta">
+        <h2>Have a Question?</h2>
+        <p>Contact us now, and we’ll be happy to assist you!</p>
+        <a href="mailto:contact@itsolutions.com" class="btn">Email Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 IT Solutions Company. All rights reserved.</p>
+    </footer>
+
 </body>
+
 </html>
