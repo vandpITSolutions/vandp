@@ -6,80 +6,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>V&P</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        .navbar {
-            background-color: #1e3c72;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-        }
-        .navbar .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        .navbar .menu a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            transition: color 0.3s ease;
-        }
-        .navbar .menu a:hover {
-            color: #ff6600;
-        }
-        .hero {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(to right, #1e3c72, #2a5298);
-            color: white;
-            padding: 20px;
-        }
-        .hero-content {
-            max-width: 800px;
-        }
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 1rem;
-            color: white;
-            background-color: #ff6600;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: #cc5500;
-        }
-        .footer {
-            background-color: #1e3c72;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
+       /* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1e3c72;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu a:hover {
+    color: #ff6600;
+}
+
+/* Page Section */
+.page-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Hero & About Section - Flexbox Layout */
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #4A90E2, #00509E);
+    padding: 50px;
+    border-radius: 10px;
+    color: white;
+    gap: 40px;
+}
+
+/* Hero Content */
+.hero-content, .about-section {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* About Section */
+.about-section {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: #ff5722;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e64a19;
+}
+
+/* Tagline Section */
+.tagline-section {
+    margin-top: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Footer */
+.footer {
+    background-color: #1e3c72;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .hero-content, .about-section {
+        max-width: 100%;
+    }
+}
+
     </style>
 </head>
 
@@ -93,35 +160,51 @@
             <a href="contact.html">Contact</a>
         </div>
     </nav>
-    <div class="pagesection">
-        <div class="clas">
+    <div class="page-section">
+        <div class="hero-wrapper">
             <section class="hero">
                 <div class="hero-content">
-                    <h1>V&P IT Solutions</h1>
-                    <p>Empowering your business with cutting-edge technology and expert support. Let's build your
-                        digital future, together.</p>
+                    <h1 class="hero-title">V&P IT Solutions</h1>
+                    <p class="hero-description">
+                        Empowering your business with cutting-edge technology and expert support. 
+                        Let's build your digital future, together.
+                    </p>
                     <a href="service.html" class="cta-button">Get Started</a>
                 </div>
             </section>
-        </div>
-        <div class="clas">
-            <p>Welcome to V&P IT Solutions, your trusted partner in cutting-edge IT solutions. We specialize in delivering innovative software development, robust cybersecurity, and cloud-based services tailored to drive your business forward. Whether you’re a startup looking to scale or an enterprise seeking digital transformation, our expert team ensures seamless integration and technology that works for you. Discover how we can elevate your IT infrastructure and maximize productivity.</p>
-            <p class="hero-subtitle">Empowering your business with cutting-edge technology and expert support. Let's build your digital future, together.</p>
-        </div>
-        <div class="clas">
-            <div class="tagline">
-                <p class="tagline">Empowering Your Digital Transformation.</p>
-                <p class="tagline">Your Vision, Our Innovation.</p>
-                <p class="tagline">Innovative IT Solutions for a Smarter Tomorrow.</p>
-                <p class="tagline">Where Technology Meets Excellence. Build. Secure. Innovate.</p>    
+    
+            <div class="about-section">
+                <p class="about-description">
+                    Welcome to V&P IT Solutions, your trusted partner in cutting-edge IT solutions. 
+                    We specialize in delivering innovative software development, robust cybersecurity, 
+                    and cloud-based services tailored to drive your business forward. Whether you’re a 
+                    startup looking to scale or an enterprise seeking digital transformation, our expert 
+                    team ensures seamless integration and technology that works for you. Discover how we 
+                    can elevate your IT infrastructure and maximize productivity.
+                </p>
+                <p class="hero-subtitle">
+                    Empowering your business with cutting-edge technology and expert support. Let's build your digital future, together.
+                </p>
             </div>
         </div>
-        <div class="clas">
+        <div class="cta-section">
             <a href="#" class="cta-button">Get Started</a>
         </div>
-
     </div>
-
+    
+    
+        <div class="tagline-section">
+            <p class="tagline">Empowering Your Digital Transformation.</p>
+            <p class="tagline">Your Vision, Our Innovation.</p>
+            <p class="tagline">Innovative IT Solutions for a Smarter Tomorrow.</p>
+            <p class="tagline">Where Technology Meets Excellence. Build. Secure. Innovate.</p>
+        </div>
+    
+        <div class="cta-section">
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+    </div>
+    
 
     <footer class="footer">
         <p>&copy; 2025 IT Solutions Company. All rights reserved.</p>
