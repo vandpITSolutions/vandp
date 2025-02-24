@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4e6e6;
+    color: #131111;
+    line-height: 1.6;
+}
+
+/* header and footer styles */
+.footer {
+    height: 10vh;
+    text-align: center;
+    background:  #007bff;
+    color: black;
+    padding: 15px 0;
+    
+}
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background:  #007bff;
+    color: white;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-menu a:hover {
+    color: #00a8ff;
+}
+/* button styles */
+
+/* common styles */
