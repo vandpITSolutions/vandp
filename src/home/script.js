@@ -5,7 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
         "Innovation at its Best",
         "Creating a Better Future",
         "Driven by Excellence",
-        "Shaping Tomorrow, Today"
+        "Shaping Tomorrow, Today",
+        "Innovative IT Solutions for a Smarter Tomorrow.",
+        "Where Technology Meets Excellence.",
+        "Your Vision | Our Innovation."
     ];
     const mottoElement = document.getElementById("motto");
     let index = 0;
@@ -22,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     starsContainer.classList.add('stars');
     document.body.appendChild(starsContainer);
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 500; i++) {
         let star = document.createElement('div');
         star.classList.add('star');
         star.style.top = Math.random() * 100 + "%";
