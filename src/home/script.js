@@ -1,5 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const mottos = [
+        "Build | Secure | Innovate",
         "Your Vision | Our Innovation.",
         "Innovation at its Best",
         "Creating a Better Future",
@@ -8,19 +9,19 @@ document.addEventListener("DOMContentLoaded", function() {
     ];
     const mottoElement = document.getElementById("motto");
     let index = 0;
-    
+
     function changeMotto() {
         mottoElement.textContent = mottos[index];
         index = (index + 1) % mottos.length;
     }
     setInterval(changeMotto, 3000);
     changeMotto();
-    
+
     // Generate stars dynamically
     const starsContainer = document.createElement('div');
     starsContainer.classList.add('stars');
     document.body.appendChild(starsContainer);
-    
+
     for (let i = 0; i < 50; i++) {
         let star = document.createElement('div');
         star.classList.add('star');
