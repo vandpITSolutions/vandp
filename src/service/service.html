@@ -5,10 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - V&P IT Solutions</title>
+    <link rel="stylesheet" href="../home/home.css">
+    <script src="../home/script.js"></script>
     <link rel="stylesheet" href="service.css">
 </head>
 
 <body>
+    <div id="header-container"></div>
+
+  <script>
+    fetch('../home/Home.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading the header:', error));
+  </script>
     <header>
         <h1>V&P IT Solutions</h1>
         <nav>
