@@ -1,36 +1,15 @@
-// Toggle nav menu on small screens
 document.addEventListener("DOMContentLoaded", () => {
+  // Toggle nav menu on small screens
   const toggle = document.getElementById("nav-toggle");
   const menu = document.getElementById("nav-menu");
 
-  toggle.addEventListener("click", () => {
-    menu.classList.toggle("active");
-  });
-
-  // Set a rotating motto
-  const mottos = [
-    "Innovate. Transform. Succeed.",
-    "Empowering Digital Evolution.",
-    "Where Technology Meets Vision.",
-    "Fueling Your Business with IT."
-  ];
-
-  let index = 0;
-  const mottoEl = document.getElementById("motto");
-
-  if (mottoEl) {
-    mottoEl.textContent = mottos[index];
-    setInterval(() => {
-      index = (index + 1) % mottos.length;
-      mottoEl.textContent = mottos[index];
-    }, 4000);
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
   }
-});
 
-
-// 
-
-document.addEventListener("DOMContentLoaded", () => {
+  // Rotating motto setup
   const mottos = [
     "Build | Secure | Innovate",
     "Your Vision | Our Innovation.",
@@ -43,15 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const mottoElement = document.getElementById("motto");
-  let index = 0;
 
-  function changeMotto() {
+  if (mottoElement && mottos.length > 0) {
+    let index = 0;
     mottoElement.textContent = mottos[index];
-    index = (index + 1) % mottos.length;
-  }
 
-  changeMotto();
-  setInterval(changeMotto, 3000);
+    setInterval(() => {
+      index = (index + 1) % mottos.length;
+      mottoElement.textContent = mottos[index];
+    }, 3000);
+  }
 
   // Generate stars dynamically
   const starsContainer = document.createElement('div');
