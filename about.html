@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - IT Solutions</title>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         /* Global Styles */
         body {
@@ -109,7 +109,7 @@
         .cta {
             text-align: center;
             padding: 40px 20px;
-            background: #28a745;
+            background: #007bff;
             color: white;
         }
 
@@ -118,16 +118,83 @@
             margin-top: 15px;
             padding: 10px 20px;
             background: white;
-            color: #28a745;
+            color: #5582d0;
             text-decoration: none;
             border-radius: 5px;
         }
+
+        :root {
+            --primary-color: #0d1b2a;
+            --accent-color: #00b4d8;
+            --text-color: #ffffff;
+            --bg-color: #007bff;
+            --font-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .mission-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 4rem 2rem;
+            font-family: var(--font-base);
+            gap: 2rem;
+        }
+
+        .mission-content {
+            flex: 1 1 500px;
+            max-width: 600px;
+        }
+
+        .mission-content h2 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .mission-content p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .mission-image {
+            flex: 1 1 400px;
+            text-align: center;
+        }
+
+        .mission-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .mission-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 3rem 1.5rem;
+            }
+
+            .mission-content h2 {
+                font-size: 2rem;
+            }
+
+            .mission-content p {
+                font-size: 1rem;
+            }
+        }
+
 
         /* Footer */
         footer {
             text-align: center;
             padding: 15px;
-            background: #343a40;
+            background: #007bff;
             color: white;
         }
     </style>
@@ -135,72 +202,91 @@
 
 <body>
 
-   <!-- Header -->
-<header>
-    <h1><i class="fas fa-network-wired"></i>  V&P  </h1>
-    <nav>
-        <ul>
-            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="service.html"><i class="fas fa-tools"></i> Services</a></li>
-            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
-            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <!-- Header -->
+    <header>
+        <h1><i class="fas fa-network-wired"></i> V&P </h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="service.html"><i class="fas fa-tools"></i> Services</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
 
     <!-- Hero Section -->
     <section class="hero">
         <h2>About Us</h2>
-        <p>Innovating technology solutions for businesses worldwide.</p>
+        <p>
+            At <strong>V&P IT Solutions</strong>, we specialize in delivering cutting-edge IT services that empower
+            startups, enterprises, and global businesses to scale efficiently. From custom software development to cloud
+            transformation and digital innovation, we are committed to providing future-ready technology that drives
+            measurable results.
+        </p>
+        <p>
+            With a client-first approach and a passion for excellence, our team of expert developers and consultants
+            ensures every solution is tailored to meet your unique business goals. Partner with us to embrace digital
+            evolution, enhance productivity, and stay ahead in today's competitive tech landscape.
+        </p>
     </section>
 
     <!-- Company Mission -->
     <section class="mission">
-        <div class="mission-content">
-            <h2>Our Mission</h2>
-            <p>At IT Solutions Company, our mission is to empower businesses through cutting-edge technology solutions.
-                We strive to provide innovative, scalable, and secure IT services to help our clients achieve their
-                goals.</p>
-        </div>
-        <div class="mission-image">
-            <img src="mission.jpg" alt="Company Mission">
-        </div>
+        <section class="mission-section">
+            <div class="mission-content">
+                <h2>Our Mission: Empowering Businesses Through Technology</h2>
+                <p>
+                    At <strong>V&P IT Solutions</strong>, our mission is to transform businesses with innovative
+                    and future-ready digital solutions. We are committed to delivering secure, scalable, and intelligent
+                    IT services that drive efficiency and fuel sustainable growth.
+                </p>
+                <p>
+                    By blending technology with business strategy, we help startups and enterprises navigate digital
+                    transformation with confidence and clarity.
+                </p>
+            </div>
+            <div class="mission-image">
+                <img src="mission.jpg" alt="V&P IT Solutions empowering businesses with technology" />
+            </div>
+        </section>
+
     </section>
 
-   <!-- Team Section -->
-<section class="team">
-    <h2><i class="fas fa-users"></i> Meet Our Team</h2>
-    <div class="team-container">
-        <div class="team-member">
-            <img src="ceo.jpg" alt="Photo of John Doe, CEO & Founder">
-            <h3>John Doe</h3>
-            <p>CEO & Founder</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+    <!-- Team Section -->
+    <section class="team">
+        <h2><i class="fas fa-users"></i> Meet Our Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="ceo.jpg" alt="Photo of John Doe, CEO & Founder">
+                <h3>John Doe</h3>
+                <p>CEO & Founder</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="cto.jpg" alt="Photo of Jane Smith, CTO">
+                <h3>Jane Smith</h3>
+                <p>Chief Technology Officer</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="developer.jpg" alt="Photo of Mike Johnson, Lead Developer">
+                <h3>Mike Johnson</h3>
+                <p>Lead Developer</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
         </div>
-        <div class="team-member">
-            <img src="cto.jpg" alt="Photo of Jane Smith, CTO">
-            <h3>Jane Smith</h3>
-            <p>Chief Technology Officer</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-            </div>
-        </div>
-        <div class="team-member">
-            <img src="developer.jpg" alt="Photo of Mike Johnson, Lead Developer">
-            <h3>Mike Johnson</h3>
-            <p>Lead Developer</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
 
     <!-- Call-to-Action -->
