@@ -6,8 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - IT Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <link rel="stylesheet" href="about.css">
     <style>
+        .social-icons a {
+            margin: 0 0.3rem;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
         .logo {
             display: flex;
             align-items: center;
@@ -85,13 +98,27 @@
         </section>
 
     </section>
+    <div class="social-icons">
+        <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/yourhandle" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
 
     <!-- Team Section -->
     <section class="team">
         <h2><i class="fas fa-users"></i> Meet Our Team</h2>
         <div class="team-container">
             <div class="team-member">
-                <img src="ceo.jpg" alt="Photo of John Doe, CEO & Founder">
+                <img src="assets/logo.png" alt="Photo">
                 <h3>Abhay Tiwari</h3>
                 <p>CEO & Founder</p>
                 <div class="social-icons">
@@ -124,7 +151,7 @@
     <!-- Call-to-Action -->
     <section class="cta">
         <h2><i class="fas fa-rocket"></i> Join Our Journey</h2>
-        <p><i class="fas fa-users"></i> We are always looking for talented individuals to join our team.</p>
+        <p><i class="fas fa-users"></i> We are always looking for new opportunities to test and enhance our skills.</p>
         <a href="contact.html" class="btn"><i class="fas fa-envelope-open-text"></i> Contact Us</a>
     </section>
 
