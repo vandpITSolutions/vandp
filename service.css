@@ -1,194 +1,205 @@
+/* Root Variables (Optional for consistency) */
+:root {
+  --primary-color: #e6f4ea;
+  --accent-color: #5cb85c;
+  --cta-gradient-start: #2d4a3a;
+  --cta-gradient-end: #5a8a5a;
+  --button-color: #4caf50;
+  --button-hover: #45a049;
+  --price-tag: #ff6b00;
+  --text-dark: #1a1a1a;
+  --text-light: #f8f9fa;
+}
+
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color);
+  color: #333;
 }
 
 /* Header */
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 nav ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 /* Hero Section */
 .hero {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #0056b3;
-    color: white;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #4cae4c;
+  color: white;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
-
-/* General Services Section */
+/* Services Section */
 .services {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
 .services h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--text-dark);
 }
 
-/* Service Category Layout */
+/* Service Grid */
 .service-category {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Individual Service Card */
+/* Individual Card */
 .service-card {
-    background-color: #fff;
-    padding: 30px 20px;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-    position: relative;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  position: relative;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
 .service-card h3 {
-    font-size: 1.5rem;
-    color: #1a1a1a;
-    margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
 }
 
 .service-card p {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 .service-card h4 {
-    margin-top: 15px;
-    color: #222;
-    font-weight: 600;
+  margin-top: 15px;
+  color: #222;
+  font-weight: 600;
 }
 
+/* List inside cards */
 .service-card ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 8px;
-    margin-bottom: 12px;
-    color: #444;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 8px 0 12px;
+  color: #444;
 }
 
 .service-card ul li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 /* Price Tag */
 .price-tag {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: #ff6b00;
-    color: #fff;
-    padding: 6px 14px;
-    border-radius: 12px;
-    font-weight: bold;
-    font-size: 1rem;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--price-tag);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 /* Demo Links */
 .service-card a {
-    color: #0077cc;
-    text-decoration: none;
-    font-weight: 500;
+  color: #2c7a7b;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .service-card a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Call-to-Action Section */
 .cta {
-    background: linear-gradient(135deg, #2d2a4a, #4c4c9d);
-    color: #fff;
-    padding: 60px 20px;
-    text-align: center;
-    border-radius: 20px;
-    margin: 60px 20px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, var(--cta-gradient-start), var(--cta-gradient-end));
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 60px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .cta h2 {
-    font-size: 2.4rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .cta p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 
 /* CTA Button */
 .cta .btn {
-    display: inline-block;
-    background-color: #ff6b00;
-    color: #fff;
-    padding: 14px 32px;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  background-color: var(--button-color);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cta .btn:hover {
-    background-color: #e65a00;
-    transform: scale(1.05);
+  background-color: var(--button-hover);
+  transform: scale(1.05);
 }
 
-
-      /* Header and Footer Styles */
+/* Footer */
 .footer {
-    text-align: center;
-    background: #007bff;
-    color: white;
-    padding: 15px 0;
-    font-size: 1rem;
+  text-align: center;
+  background: var(--accent-color);
+  color: white;
+  padding: 15px 0;
+  font-size: 1rem;
 }

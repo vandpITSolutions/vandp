@@ -1,15 +1,15 @@
 :root {
-  --primary-color: #e6f4ea; /* light green background */
-  --secondary-color: #5cb85c; /* medium green for nav/footer */
-  --t2: #9fd5a3; /* greenish for CTA */
+  --primary-color: #e6f4ea;
+  --secondary-color: #5cb85c;
+  --t2: #9fd5a3;
   --text-color: #131111;
-
-  --btn-primary-color: #4caf50; /* standard green */
-  --btn-hover-color: #81c784; /* lighter green */
+  --btn-primary-color: #4caf50;
+  --btn-hover-color: #81c784;
   --crescent-color: #a9d4b4;
   --crescent-shadow: #7cbf7c;
 }
 
+/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -24,15 +24,7 @@ body {
   font-size: 1rem;
 }
 
-/* Header and Footer */
-.footer {
-  text-align: center;
-  background: var(--secondary-color);
-  color: white;
-  padding: 15px 0;
-  font-size: 1rem;
-}
-
+/* Header & Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -47,13 +39,33 @@ body {
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 45px;
+  width: auto;
+  border-radius: 12px;
+  padding: 4px;
+  background-color: white;
+  object-fit: contain;
+  max-width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 
 .nav-menu {
+  list-style: none;
   display: flex;
   gap: 15px;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-menu a {
@@ -74,6 +86,15 @@ body {
   background: none;
   border: none;
   color: white;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background: var(--secondary-color);
+  color: white;
+  padding: 15px 0;
+  font-size: 1rem;
 }
 
 /* Hero Section */
@@ -122,6 +143,19 @@ body {
   font-size: 1rem;
 }
 
+.motto {
+  margin-top: 0.8rem;
+  font-size: 1.5rem;
+  font-style: italic;
+  animation: fade-in-out 8s infinite ease-in-out;
+}
+
+@keyframes fade-in-out {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Buttons */
 .btn {
   display: inline-block;
   padding: 12px 24px;
@@ -129,8 +163,8 @@ body {
   border-radius: 30px;
   font-size: 1rem;
   text-decoration: none;
-  transition: transform 0.3s ease, background-color 0.3s ease;
   font-weight: 600;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .btn-primary {
@@ -141,7 +175,7 @@ body {
 .btn-primary:hover {
   background-color: var(--btn-hover-color);
   transform: scale(1.05);
-  color: #131111;
+  color: var(--text-color);
 }
 
 .btn-secondary {
@@ -152,25 +186,6 @@ body {
 .btn-secondary:hover {
   background-color: rgba(255, 255, 255, 0.2);
   transform: scale(1.05);
-}
-
-.motto {
-  margin-top: 0.8rem;
-  font-size: 1.5rem;
-  font-style: italic;
-  animation: fade-in-out 8s infinite ease-in-out;
-}
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  padding: 0;
-  margin: 0;
-}
-
-@keyframes fade-in-out {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
 }
 
 /* CTA Section */
@@ -203,16 +218,9 @@ body {
   padding: 14px 36px;
   border-radius: 30px;
   font-weight: 700;
-  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.cta .btn-primary:hover {
-  background-color: var(--btn-hover-color);
-  transform: scale(1.05);
-  color: #131111;
-}
-
-/* Stars (Optional if animated BG added later) */
+/* Optional Background Stars */
 .stars {
   position: absolute;
   width: 100%;
@@ -265,11 +273,16 @@ body {
   .crescent {
     display: none;
   }
+
+  .logo-img {
+    height: 38px;
+  }
 }
 
 @media (max-width: 480px) {
-  .logo {
-    font-size: 1.5rem;
+  .logo-img {
+    height: 32px;
+    border-radius: 8px;
   }
 
   .hero-content h2 {
@@ -287,46 +300,5 @@ body {
 
   .footer {
     font-size: 0.9rem;
-  }
-}
-
-.logo-img {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.logo-img {
-  height: 45px;
-  width: auto;
-  border-radius: 12px;
-  padding: 4px;
-  background-color: white; /* optional contrast */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 100%;
-}
-
-/* Optional hover effect */
-.logo-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-}
-
-/* Make logo responsive on smaller screens */
-@media (max-width: 768px) {
-  .logo-img {
-    height: 38px;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-img {
-    height: 32px;
-    border-radius: 8px;
   }
 }
