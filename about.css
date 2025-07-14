@@ -1,13 +1,15 @@
 /* Variables */
-/* Variables */
 :root {
-  --primary-color: #1b4332;         /* Deep green */
-  --accent-color: #2d6a4f;          /* Secondary green */
+  --primary-color: #1b4332;         /* Deep forest green */
+  --accent-color: #52b788;          /* Light green accent */
   --text-color: #ffffff;
-  --bg-color: #40916c;              /* Primary background green */
+  --bg-color: #2d6a4f;              /* Rich green for sections */
+  --light-bg-color: #d8f3dc;        /* Light background for contrast */
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
   --font-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
-  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2px 10px var(--card-shadow);
+  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Global Styles */
@@ -15,8 +17,8 @@ body {
   font-family: var(--font-base);
   margin: 0;
   padding: 0;
-  background-color: #f1fdf3; /* Light greenish background */
-  color: #1b1b1b;
+  background-color: var(--light-bg-color); /* Soft neutral base */
+  color: #1e1e1e;
   line-height: 1.6;
 }
 
@@ -124,7 +126,7 @@ nav ul li a {
 .team {
   text-align: center;
   padding: 4rem 2rem;
-  background: #e9f5ec;
+  background: var(--light-bg-color);
 }
 
 .team h2 {
@@ -140,7 +142,7 @@ nav ul li a {
 }
 
 .team-member {
-  background: white;
+  background: var(--card-bg);
   padding: 2rem 1.5rem;
   border-radius: 1rem;
   box-shadow: var(--shadow-light);
@@ -167,7 +169,7 @@ nav ul li a {
 
 .social-icons a {
   margin: 0 0.3rem;
-  color: var(--bg-color);
+  color: var(--accent-color);
   font-size: 1.2rem;
 }
 
@@ -175,7 +177,7 @@ nav ul li a {
 .cta {
   text-align: center;
   padding: 4rem 2rem;
-  background: var(--bg-color);
+  background: var(--primary-color);
   color: white;
 }
 
@@ -187,15 +189,15 @@ nav ul li a {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background: white;
-  color: var(--bg-color);
+  background: var(--accent-color);
+  color: white;
   font-weight: bold;
   border-radius: 0.5rem;
   transition: background-color 0.3s ease;
 }
 
 .cta .btn:hover {
-  background: #d8f3dc;
+  background: #74c69d;
 }
 
 /* Footer */
